@@ -1,7 +1,8 @@
-package com.example.examplemod.platform;
+package com.ewyboy.datadriven.platform;
 
-import com.example.examplemod.Constants;
-import com.example.examplemod.platform.services.IPlatformHelper;
+import com.ewyboy.datadriven.platform.services.IPlatformHelper;
+import com.ewyboy.datadriven.Constants;
+import com.ewyboy.datadriven.util.ModLogger;
 
 import java.util.ServiceLoader;
 
@@ -14,7 +15,8 @@ public class Services {
         final T loadedService = ServiceLoader.load(clazz)
                 .findFirst()
                 .orElseThrow(() -> new NullPointerException("Failed to load service for " + clazz.getName()));
-        Constants.LOG.debug("Loaded {} for service {}", loadedService, clazz);
+        ModLogger.debug("Loaded {} for service {}", loadedService, clazz);
+
         return loadedService;
     }
 }

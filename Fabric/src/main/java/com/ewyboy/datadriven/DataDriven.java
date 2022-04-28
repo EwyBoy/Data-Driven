@@ -1,9 +1,10 @@
-package com.example.examplemod;
+package com.ewyboy.datadriven;
 
+import com.ewyboy.datadriven.util.ModLogger;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.client.item.v1.ItemTooltipCallback;
 
-public class ExampleMod implements ModInitializer {
+public class DataDriven implements ModInitializer {
     
     @Override
     public void onInitialize() {
@@ -13,7 +14,7 @@ public class ExampleMod implements ModInitializer {
         // project.
 
         // Use Fabric to bootstrap the Common mod.
-        Constants.LOG.info("Hello Fabric world!");
+        ModLogger.info("Hello Fabric world!");
         CommonClass.init();
         
         // Some code like events require special initialization from the

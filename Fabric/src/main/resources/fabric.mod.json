@@ -1,29 +1,29 @@
 {
     "schemaVersion": 1,
-    "id": "modid",
+    "id": "datadriven",
     "version": "${version}",
   
-    "name": "Example Mod",
-    "description": "This is an example description! Tell everyone what your mod is about!",
+    "name": "Data-Driven",
+    "description": "Generate your own content using json files",
     "authors": [
-      "Me!"
+      "Ewy"
     ],
     "contact": {
-      "homepage": "https://fabricmc.net/",
-      "sources": "https://github.com/FabricMC/fabric-example-mod"
+      "homepage": "https://www.curseforge.com/minecraft/mc-mods/data-driven",
+      "sources": "https://github.com/EwyBoy/Barista"
     },
   
-    "license": "CC0-1.0",
+    "license": "MIT",
     "icon": "assets/modid/icon.png",
   
     "environment": "*",
     "entrypoints": {
       "main": [
-        "com.example.examplemod.ExampleMod"
+        "com.ewyboy.datadriven.DataDriven"
       ]
     },
     "mixins": [
-      "modid.mixins.json"
+      "datadriven.mixins.json"
     ],
   
     "depends": {

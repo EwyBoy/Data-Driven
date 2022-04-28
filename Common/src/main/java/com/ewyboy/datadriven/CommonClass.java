@@ -1,6 +1,8 @@
-package com.example.examplemod;
+package com.ewyboy.datadriven;
 
-import com.example.examplemod.platform.Services;
+import com.ewyboy.datadriven.content.Register;
+import com.ewyboy.datadriven.platform.Services;
+import com.ewyboy.datadriven.util.ModLogger;
 import net.minecraft.core.Registry;
 import net.minecraft.network.chat.Component;
 import net.minecraft.network.chat.TextComponent;
@@ -18,8 +20,14 @@ public class CommonClass {
     // invoked from a mod loader specific project like Forge or Fabric.
     public static void init() {
 
-        Constants.LOG.info("Hello from Common init on {}! we are currently in a {} environment!", Services.PLATFORM.getPlatformName(), Services.PLATFORM.isDevelopmentEnvironment() ? "development" : "production");
-        Constants.LOG.info("Diamond Item >> {}", Registry.ITEM.getKey(Items.DIAMOND));
+        ModLogger.info(
+                "Hello from Common init on {}! we are currently in a {} environment!",
+                Services.PLATFORM.getPlatformName(),
+                Services.PLATFORM.isDevelopmentEnvironment() ? "development" : "production"
+        );
+        ModLogger.info("Diamond Item >> {}", Registry.ITEM.getKey(Items.DIAMOND));
+
+        Register.registerDataContent();
     }
 
     // This method serves as a hook to modify item tooltips. The vanilla game
